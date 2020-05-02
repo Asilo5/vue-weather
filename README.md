@@ -1,24 +1,24 @@
-# vue-weather
+# Vue Weather ☀️🌧
 
-## Project setup
-```
-npm install
-```
+Vue Weather was an app used to build my knowledge of Vue.js. It is a simple app that shows the weather of your country of choice.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## View Vue Weather locally in your computer
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Clone the repo to your terminal :``` $ git clone https://github.com/Asilo5/vue-weather.git```
 
-### Lints and fixes files
-```
-npm run lint
-```
+Run ``` $ npm install ``` in your terminal
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+To start your web server run ``` $ npm run serve ```
+
+To view app go to ``` http://localhost:8000 ```
+
+## What was used to build Vue Weather
+
+Vue Weather was built using:
+  - Vue
+  - HTML
+  - CSS
+  
+![image of Vue Weather]()
+![image of Vue Weather]()
+![image of Vue Weather]()
