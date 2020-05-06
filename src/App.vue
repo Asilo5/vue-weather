@@ -6,6 +6,18 @@
                  class="search-bar" 
                  placeholder="Search..." />
       </form>
+
+      <section class="weather-wrap">
+           <section class="location">
+             <h1 class="location"></h1>
+             <h2 class="date"></h2>
+           </section>
+
+           <section class="weather-box">
+              <div class="temp">°c</div>
+              <div class="weather"></div>
+           </section>
+      </section>
     </main>
   </section>
 </template>
