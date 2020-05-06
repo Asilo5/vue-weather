@@ -62,5 +62,12 @@ export default {
     background-color: rgba(255, 255, 255, 0.15);
     border-radius: 0px 16px 0px 16px;
     transition: 0.4s;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  .search-bar:focus {
+     background-color: rgba(255, 255, 255, 0.75);
+     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+     border-radius: 16px 0px 16px 0px;
   }
 </style>
