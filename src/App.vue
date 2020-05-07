@@ -1,22 +1,24 @@
 <template>
   <section id="app">
     <main>
-      <form class="search-box">
-          <input type="text" 
-                 class="search-bar" 
-                 placeholder="Search..." />
-      </form>
+      <section class="all-info">
+          <form class="search-box">
+              <input type="text" 
+                    class="search-bar" 
+                    placeholder="Search..." />
+          </form>
 
-      <section class="weather-wrap">
-           <section class="location">
-             <h1 class="location"></h1>
-             <h2 class="date"></h2>
-           </section>
+          <section class="weather-wrap">
+              <section class="location-box">
+                <h1 class="location">Bob</h1>
+                <h2 class="date"></h2>
+              </section>
 
-           <section class="weather-box">
-              <div class="temp">°c</div>
-              <div class="weather"></div>
-           </section>
+              <section class="weather-box">
+                  <div class="temp">°c</div>
+                  <div class="weather"></div>
+              </section>
+          </section>
       </section>
     </main>
   </section>
@@ -56,6 +58,11 @@ export default {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75));
   }
 
+  .all-info {
+    width: 50%;
+    margin: 5em auto;
+  }
+
   .search-box {
     width: 100%;
     margin-bottom: 30px;
@@ -81,5 +88,14 @@ export default {
      background-color: rgba(255, 255, 255, 0.75);
      box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
      border-radius: 16px 0px 16px 0px;
+  }
+
+  .location {
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 1px 3px rgba(0, 0, 0, 0.25);
+    font-weight: 500;
+    color: white;
+    font-size: 4em;
   }
 </style>
