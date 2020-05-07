@@ -5,7 +5,8 @@
           <form class="search-box">
               <input type="text" 
                     class="search-bar" 
-                    placeholder="Search..." />
+                    placeholder="Search..." 
+              />
           </form>
 
           <section class="weather-wrap">
@@ -29,7 +30,8 @@ export default {
   name: 'App',
   data () {
     return {
-      api_key: 'c117c79223f634582cd813b812d3e14b'
+      api_key: 'c117c79223f634582cd813b812d3e14b',
+      url_base: 'https://api.openweathermap.org/data/2.5/'
     }
   }
 }
@@ -120,6 +122,15 @@ export default {
     text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
     background-color: rgba(255, 255, 255, 0.25);
     border-radius: 15px;
-    margin: 10px;
+    margin: 30px 0px;
+  }
+
+  .weather {
+    margin: 15px;
+    color: white;
+    font-size: 48px;
+    font-weight: 700 italic;
+    font-style: italic;
+    text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
   }
 </style>
