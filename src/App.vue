@@ -1,22 +1,25 @@
 <template>
   <section id="app">
     <main>
-      <form class="search-box">
-          <input type="text" 
-                 class="search-bar" 
-                 placeholder="Search..." />
-      </form>
+      <section class="all-info">
+          <form class="search-box">
+              <input type="text" 
+                    class="search-bar" 
+                    placeholder="Search..." 
+              />
+          </form>
 
-      <section class="weather-wrap">
-           <section class="location">
-             <h1 class="location"></h1>
-             <h2 class="date"></h2>
-           </section>
+          <section class="weather-wrap">
+              <section class="location-box">
+                <h1 class="location">Bob</h1>
+                <h2 class="date">Bobs mom</h2>
+              </section>
 
-           <section class="weather-box">
-              <div class="temp">°c</div>
-              <div class="weather"></div>
-           </section>
+              <section class="weather-box">
+                  <div class="temp">Bob°c</div>
+                  <div class="weather">Beeeeb</div>
+              </section>
+          </section>
       </section>
     </main>
   </section>
@@ -27,7 +30,8 @@ export default {
   name: 'App',
   data () {
     return {
-      api_key: 'c117c79223f634582cd813b812d3e14b'
+      api_key: 'c117c79223f634582cd813b812d3e14b',
+      url_base: 'https://api.openweathermap.org/data/2.5/'
     }
   }
 }
@@ -56,6 +60,11 @@ export default {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75));
   }
 
+  .all-info {
+    width: 50%;
+    margin: 5em auto;
+  }
+
   .search-box {
     width: 100%;
     margin-bottom: 30px;
@@ -81,5 +90,47 @@ export default {
      background-color: rgba(255, 255, 255, 0.75);
      box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
      border-radius: 16px 0px 16px 0px;
+  }
+
+  .location {
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 1px 3px rgba(0, 0, 0, 0.25);
+    font-weight: 500;
+    color: white;
+    font-size: 4em;
+  }
+
+  .date {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300;
+    color: white;
+    margin: 10px;
+  }
+
+  .weather-box {
+    text-align: center;
+  }
+
+  .temp {
+    display: inline;
+    padding: 10px 25px;
+    color: white;
+    font-size: 102px;
+    font-weight: 900;
+    text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    margin: 30px 0px;
+  }
+
+  .weather {
+    margin: 15px;
+    color: white;
+    font-size: 48px;
+    font-weight: 700 italic;
+    font-style: italic;
+    text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
   }
 </style>
