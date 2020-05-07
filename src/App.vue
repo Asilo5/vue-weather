@@ -11,12 +11,12 @@
           <section class="weather-wrap">
               <section class="location-box">
                 <h1 class="location">Bob</h1>
-                <h2 class="date"></h2>
+                <h2 class="date">Bobs mom</h2>
               </section>
 
               <section class="weather-box">
-                  <div class="temp">°c</div>
-                  <div class="weather"></div>
+                  <div class="temp">Bob°c</div>
+                  <div class="weather">Beeeeb</div>
               </section>
           </section>
       </section>
@@ -97,5 +97,29 @@ export default {
     font-weight: 500;
     color: white;
     font-size: 4em;
+  }
+
+  .date {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300;
+    color: white;
+    margin: 10px;
+  }
+
+  .weather-box {
+    text-align: center;
+  }
+
+  .temp {
+    display: inline;
+    padding: 10px 25px;
+    color: white;
+    font-size: 102px;
+    font-weight: 900;
+    text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    margin: 10px;
   }
 </style>
