@@ -17,8 +17,8 @@
               </section>
 
               <section class="weather-box">
-                  <div class="temp">Bob°c</div>
-                  <div class="weather">Beeeeb</div>
+                  <div class="temp">{{ weather.main.temp }}°c</div>
+                  <div class="weather">{{ weather.weather[0].description }}</div>
               </section>
           </section>
       </section>
