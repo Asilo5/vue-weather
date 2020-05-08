@@ -2,7 +2,7 @@
   <section id="app">
     <main>
       <section class="all-info">
-          <form class="search-box">
+          <form class="search-box" @submit="preventSubmit">
               <input type="text" 
                     class="search-bar" 
                     placeholder="Search..." 
@@ -10,9 +10,9 @@
                     @keypress="fetchWeather"
               />
           </form>
-          <section class="weather-wrap">
+          <section class="weather-wrap" v-if="typeof weather.main != 'undefined'">
               <section class="location-box">
-                <h1 class="location">Bob</h1>
+                <h1 class="location">{{ weather.name }}, {{ weather.sys.country }} </h1>
                 <h2 class="date">Bobs mom</h2>
               </section>
 
@@ -39,12 +39,16 @@ export default {
   },
   methods : {
     fetchWeather (e) {
-      if(e == 'Enter') {
-        fetch(`${this.url_base}weather?q=${this.query}&units=metric&APPID${this.api_key}`)
+      if(e.key == 'Enter') {
+        fetch(`${this.url_base}weather?q=${this.query}&units=metric&APPID=${this.api_key}`)
           .then(res => res.json())
-          .then(weather => this.weather = weather)
+          .then(results => this.weather = results)
           .catch(err => console.log(err.message))
       }
+    },
+
+    preventSubmit (e) {
+      e.preventDefault();
     }
   }
 }
