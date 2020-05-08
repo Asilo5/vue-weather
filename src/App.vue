@@ -13,11 +13,11 @@
           <section class="weather-wrap" v-if="typeof weather.main != 'undefined'">
               <section class="location-box">
                 <h1 class="location">{{ weather.name }}, {{ weather.sys.country }} </h1>
-                <h2 class="date">Bobs mom</h2>
+                <h2 class="date"></h2>
               </section>
 
               <section class="weather-box">
-                  <div class="temp">{{ weather.main.temp }}°c</div>
+                  <div class="temp">{{ Math.round(weather.main.temp) }}°c</div>
                   <div class="weather">{{ weather.weather[0].description }}</div>
               </section>
           </section>
@@ -49,6 +49,11 @@ export default {
 
     preventSubmit (e) {
       e.preventDefault();
+    },
+
+    currentDate () {
+      // let newDate = new Date();
+
     }
   }
 }
