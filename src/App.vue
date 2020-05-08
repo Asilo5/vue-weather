@@ -6,9 +6,9 @@
               <input type="text" 
                     class="search-bar" 
                     placeholder="Search..." 
+                    v-model="query"
               />
           </form>
-
           <section class="weather-wrap">
               <section class="location-box">
                 <h1 class="location">Bob</h1>
@@ -31,8 +31,13 @@ export default {
   data () {
     return {
       api_key: 'c117c79223f634582cd813b812d3e14b',
-      url_base: 'https://api.openweathermap.org/data/2.5/'
+      url_base: 'https://api.openweathermap.org/data/2.5/',
+      query: '',
+      weather: {}
     }
+  },
+  methods : {
+
   }
 }
 </script>
