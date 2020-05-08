@@ -7,6 +7,7 @@
                     class="search-bar" 
                     placeholder="Search..." 
                     v-model="query"
+                    @keypress="fetchWeather"
               />
           </form>
           <section class="weather-wrap">
@@ -37,7 +38,14 @@ export default {
     }
   },
   methods : {
-
+    fetchWeather (e) {
+      if(e == 'Enter') {
+        fetch(`${this.url_base}weather?q=${this.query}&units=metric&APPID${this.api_key}`)
+          .then(res => res.json())
+          .then(weather => this.weather = weather)
+          .catch(err => console.log(err.message))
+      }
+    }
   }
 }
 </script>
