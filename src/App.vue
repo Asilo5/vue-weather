@@ -83,13 +83,19 @@ export default {
     font-family: 'montserrat', sans-serif;
   }
 
-  /* add background images to assets to target later */
   #app {
     background-image: url('../assets/cloudy.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     transition: 0.4s;
+  }
+
+  #app.sunny {
+    background-image: url('../assets/sunny.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   main {
