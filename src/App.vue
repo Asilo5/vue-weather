@@ -13,7 +13,7 @@
           <section class="weather-wrap" v-if="typeof weather.main != 'undefined'">
               <section class="location-box">
                 <h1 class="location">{{ weather.name }}, {{ weather.sys.country }} </h1>
-                <h2 class="date"></h2>
+                <h2 class="date">{{ currentDate() }}</h2>
               </section>
 
               <section class="weather-box">
@@ -57,9 +57,9 @@ export default {
       let months = ["January","February","March","April","May","June","July",
             "August","September","October","November","December"];
       
-      let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+      let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-      let day = days[newDate.getDate()];
+      let day = days[newDate.getDay()];
       let date = newDate.getDate();
       let month = months[newDate.getMonth()];
       let year = newDate.getFullYear();
