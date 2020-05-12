@@ -85,6 +85,7 @@ export default {
 
   /* add background images to assets to target later */
   #app {
+    background-image: url('../assets/cloudy.png');
     transition: 0.4s;
   }
 
