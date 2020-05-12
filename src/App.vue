@@ -52,7 +52,19 @@ export default {
     },
 
     currentDate () {
-      // let newDate = new Date();
+      let newDate = new Date();
+
+      let months = ["January","February","March","April","May","June","July",
+            "August","September","October","November","December"];
+      
+      let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+      let day = days[newDate.getDate()];
+      let date = newDate.getDate();
+      let month = months[newDate.getMonth()];
+      let year = newDate.getFullYear();
+
+      return `${day} ${date} ${month} ${year}`;
 
     }
   }
