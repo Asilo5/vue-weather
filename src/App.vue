@@ -1,5 +1,5 @@
 <template>
-  <section id="app">
+  <section id="app" :class="typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'warm' : '' ">
     <main>
       <section class="all-info">
           <form class="search-box" @submit="preventSubmit">
@@ -91,7 +91,7 @@ export default {
     transition: 0.4s;
   }
 
-  #app.sunny {
+  #app.warm {
     background-image: url('../assets/sunny.png');
     background-position: center;
     background-repeat: no-repeat;
