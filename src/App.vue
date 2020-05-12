@@ -86,6 +86,9 @@ export default {
   /* add background images to assets to target later */
   #app {
     background-image: url('../assets/cloudy.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     transition: 0.4s;
   }
 
