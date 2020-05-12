@@ -1,5 +1,5 @@
 <template>
-  <section id="app" :class="typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'warm' : '' ">
+  <section id="app" :class="typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'warm' : 'cloudy' ">
     <main>
       <section class="all-info">
           <form class="search-box" @submit="preventSubmit">
@@ -84,7 +84,7 @@ export default {
   }
 
   #app {
-    background-image: url('../assets/cloudy.png');
+    background-image: url('../assets/og.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -92,7 +92,14 @@ export default {
   }
 
   #app.warm {
-    background-image: url('../assets/sunny.png');
+    background-image: url('../assets/warm.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #app.cloudy {
+    background-image: url('../assets/cloudy.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
